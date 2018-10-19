@@ -1,4 +1,4 @@
-# IPFS 作为 Solid 存储层
+# IPFS && Solid ？
 ---
 # 社交互联数据
 
@@ -62,13 +62,15 @@ const file = stream.pipe(fs.createWriteStream(filePath))
 const file = this.node.files.addReadableStream().write(stream)
 ```
 ---
-添加文件到 IPFS 上的主要意义在于，数据此时可以通过 IPFS 从一台服务器同步到另一台服务器。
+数据此时可以通过 IPFS 从一台服务器同步到另一台服务器。
 
 但前提是 POD 要维护一份里面文件的列表，包含这些文件的 multihash，从而另一个 POD 能够看着这份列表把所有文件同步过来。
 ---
-可以在浏览器中动态创建 POD，并在把数据保存到 IPFS 后，请求某个 Pin Service 保存刚放到本地 IPFS repo 里的数据，例如你的手机。
+对于非社交场景，可以在浏览器中 (SW) 动态创建 POD，并在把数据保存到 IPFS 后，请求某个 Pin Service 保存刚放到本地 IPFS repo 里的数据，例如你的手机。
 
 不信任第三方 POD 的用户
+
+对于分享场景，POD 作为 IPFS 网关分发内容，期待其他网关转发内容分担压力。
 ---
 # 为什么会存在 POD 提供商
 
@@ -120,7 +122,7 @@ POD 上的数据遵从 LDP（互联数据平台） 规范.
 |/tracker/\*/\*|OPTIONS|用于看某个资源允许哪些 REST 方法|
 |/tracker/\*/\*|HEAD|只读取某个资源的元信息|
 ---
-很多用户可能会选择把自己写的文章拍的短视频发到一个中转节点上，并订阅这个中转节点上其他人生产的内容。[[14]](#14)
+很多用户可能会选择把自己写的文章拍的短视频发到一个中转节点上，并订阅这个中转节点上其他人生产的内容。
 
 这个中转节点可能是一个中心化的服务器，比如泛用无界角色扮演平台上有很多语言cos线程（即帖子），当用户订阅了某个线程之后，浏览器通过 POST 请求把用户的 WebID 发给这个线程的收件箱，并维护一个与服务器的长连接，从而在有新的回复时及时通知用户。
 ---
@@ -161,3 +163,10 @@ WebID 也很类似，POD 会帮你生成一份公钥放在我们的页面上（�
 1. 内容存储和读写
 1. 怎么关注别人还有接收推送
 ---
+
+https://learnsolid.github.io/
+![]
+(https://github.com/linonetwo/presentation-about-ipfs-solid/blob/master/qr.png?raw=true)
+
+Solid 中文社区
+http://solid.authing.cn/
