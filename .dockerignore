@@ -1,4 +1,2 @@
-*
-!package.json
-!yarn.lock
-!index.mdx 
+node_modules
+dist

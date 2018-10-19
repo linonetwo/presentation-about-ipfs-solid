@@ -1,0 +1,13 @@
+{
+  "name": "mdx-deck-example",
+  "type": "static",
+  "static": {
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "public": true
+}

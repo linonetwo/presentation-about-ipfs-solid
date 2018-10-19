@@ -2,11 +2,10 @@
   "name": "presentation-about-ipfs-solid",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "mdx-deck -p 3000 index.mdx",
+    "start": "mdx-deck -p 3000 deck.mdx",
     "now": "now --public --docker",
-    "build": "mdx-deck build index.mdx",
+    "build": "mdx-deck build deck.mdx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,10 +18,9 @@
     "url": "https://github.com/linonetwo/presentation-about-ipfs-solid/issues"
   },
   "homepage": "https://github.com/linonetwo/presentation-about-ipfs-solid#readme",
-  "devDependencies": {
-    "mdx-deck": "^1.7.7"
-  },
   "dependencies": {
-    "grid-styled": "^5.0.2"
+    "mdx-deck": "^1.7.7",
+    "grid-styled": "^5.0.2",
+    "react": "^16.5.2"
   }
 }

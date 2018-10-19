@@ -3126,7 +3126,7 @@ mdurl@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/mdurl/download/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
-mdx-deck@^1.7.7:
+mdx-deck@^1.0.1:
   version "1.7.7"
   resolved "http://registry.npm.taobao.org/mdx-deck/download/mdx-deck-1.7.7.tgz#441fe4faca42e04dc84fa4942824d9e8d0dc2e1c"
   dependencies:
